@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background:linear-gradient(to bottom left, rgb(0, 153, 255), rgb(126, 156, 163));
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+body{
+    height: 100vh;
+}
+.content{
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 75%;
+    padding: 1rem;
+    background-image: url('/static/images/arthur-yao-8P_8v-NKDrY-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    height: 80%;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0.5rem rgba(11, 40, 66, 0.726);
+}
+.content-container{
+    height: 100%;
+}
+#app{
+    display: flex;
+    margin-top: 3rem;
+    height: 90%;
+}
+.aside-container{
+    width: 40%;
+    height: 116%;
+    background-color: rgba(11, 40, 66, 0.726);
+    margin-top: -6.5rem;
+    margin-right: -1rem;
+    backdrop-filter: blur(5px);
+    border-radius: 0px 1rem 1rem 0px;
+    box-shadow: 0.2rem 0rem 1.5rem 0.5rem rgba(11, 40, 66, 0.726);
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+    border: 1px solid black;
+}
+header h1{
+    font-family: verdana, sans-serif;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+#weather-details{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 60%;
+    height: 80%;
+}
+#main-content{
+    width: 75%;
+    height: 80%;
+}
+p{
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    
+}
+#temp{
+    font-size: 3.5rem;
+}
+.texts{
+ margin-top: auto; 
+ color: white;  
+}
+#time-and-date{
+    font-size: 1.2rem;
+}
+input{
+    border-bottom: solid 1px black;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    border-color: #7bafd6;
+}
+form{
+    margin-top: 2rem;
+    width: 31rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+button{
+    background-color: transparent;
+    border: 0px;
+}
+button img{
+    width: 2rem;
+    height: 2rem;
+}
+hr{
+    
+    border-color: #7bafd6;
+}
+h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    color: rgba(123, 175, 214, 0.5);
+}
+input::placeholder{
+    color: rgba(123, 175, 214, 0.5);
+
+}
+.texts-2 {
+    margin-top: -2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+.texts-2 div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0.2rem 0;
+}
+.texts-2 div p{
+    font-size: 1rem;
+    color: rgba(245, 245, 245, 0.644);
+}
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .content {
+        margin-top: 2rem;
+        height: auto;
+    }
+
+    #app {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .aside-container {
+        border-radius: 1rem;
+        flex: 1;
+        padding: 1rem;
+    }
+
+    #main-content {
+        flex: 1;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #temp {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    input {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    button img {
+        width: 1rem;
+        height: 1rem;
+    }
+}

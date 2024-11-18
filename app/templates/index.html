@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Astrix's Weather App.</title>
+</head>
+<body>
+    <div class="content">
+       <div class="content-container">
+        <header>
+            <h1>Astrix's Weather App.</h1>
+        </header>
+        <div id="app">
+            <main id="main-content">
+                <span id="weather-details">
+                    <div class="texts"><p id="temp">26°</p></div>
+                    <div class="texts"><p id="location">City</p>
+                        <small><p id="time-and-date">Last Updated</p></div></small>
+                    <div class="texts">
+                        <img id="weather-icon" src="" alt="" >
+                        <p id="condition">Condition</p>
+                    </div>
+                </span>
+            </main>
+            <div class="aside-container">
+                <aside>
+                    <form action="GET">
+                        <input type="text" name="city" id="search-location" placeholder="Enter city">
+                        <button>
+                            <img src="/static/images/search-interface-symbol.png" alt="Search">
+                        </button>
+                    </form>
+                    <hr>
+                    <div id="saved-locations">
+                        <!-- User inputs will appear here -->
+                    </div>
+                    <div class="texts-2">
+                        <h4>Weather Details</h4>
+                        <div>
+                            <p id="wind-speed">Wind</p>
+                            <p id="speed">km/h</p>
+                        </div>
+                        <div>
+                            <p id="humidity-lvl">Humidity</p>
+                            <p id="humidity">%</p>
+                        </div>
+                        <div>
+                            <p id="rain">Rain</p>
+                            <p id="rain-amnt">%</p>
+                        </div>
+                        <div>
+                            <p id="clouds">Cloudy</p>
+                            <p id="cloudy">%</p>
+                        </div>
+                    </div>
+                    <hr>
+                </aside>
+            </div>
+        </div>
+       </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
